@@ -16,4 +16,4 @@
 
 Please split your commits into reasonably small chunks so progress can be seen.
 
-__Important__: The solution must use Node.js and MongoDB in the back end and AngularJS 1.x and JavaScript in the front end.
+__Important__: The solution must use Node.js and MongoDB in the back end and AngularJS 1.x and JavaScript or Angular 2 and TypeScript in the front end.
