@@ -1,3 +1,15 @@
+# API
+
+Used DDD
+Hapi logging
+Postman Folder
+Launch instructions
+Not best text search solution for title search 
+Left off: authentication, linter, deploy in docker
+
+
+# APP
+
 ### Guidelines
 
 1. Fork repository.
