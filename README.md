@@ -6,9 +6,16 @@ Postman Folder
 Launch instructions
 Not best text search solution for title search 
 Left off: authentication, linter, deploy in docker
+ObjectId parsed to any sometimes. Gotta undersand better how this could work
 
 
 # APP
+Used bootstrap
+UI could be have better user feedback such as loaders, locks, etc
+Used fetch to get data. Have to study better, but angular http looked too much of a hassle with no big benefit
+Lacked proper error handling when dealing with api
+
+Instructions of how to run it
 
 ### Guidelines
 

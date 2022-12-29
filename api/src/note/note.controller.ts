@@ -90,5 +90,23 @@ export default class NoteController {
                 return this.notesService.createNote(incomingNote);
             },
         });
+
+        this.hapi.route({
+            method: 'PUT',
+            path: `${this.path}`,
+            options: {
+                validate: {
+                    payload: Joi.object({
+                        _id: Joi.string().hex().length(24).required(),
+                        title: Joi.string().required(),
+                        content: Joi.string().required(),
+                    }),
+                },
+            },
+            handler: async (req: Hapi.Request): Promise<Note> => {
+                const incomingNote: Note = req.payload as Note;
+                return this.notesService.updateNote(incomingNote);
+            },
+        });
     }
 }
