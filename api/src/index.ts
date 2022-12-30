@@ -45,6 +45,16 @@ const init = async (): Promise<void> => {
     const notesRouter: NoteController = container.resolve(NoteController);
     notesRouter.setupRoutes();
     await server.register(Inert);
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: 'www',
+                redirectToSlash: true,
+            },
+        },
+    });
     await server.start();
 
     console.log(`Notes App running on port ${ConfigService.PORT}.`);
@@ -59,7 +69,7 @@ const init = async (): Promise<void> => {
     process.on('SIGINT', async () => {
         await server.stop();
         await conn.destroy();
-        console.log('Notes App stopped.');
+        console.log('   Notes App stopped.');
         process.exit(0);
     });
 

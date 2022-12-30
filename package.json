@@ -1,0 +1,11 @@
+{
+  "name": "notetaker2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cloud-people/notetaker2.git",
+  "author": "Henrique Rabello <hrabello@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "cd api && yarn && yarn build && cp -r node_modules/ dist/node_modules && cp .env.dev dist/.env && cd ../app && yarn && yarn build && cp -r dist/app ../api/dist/www"
+  }
+}

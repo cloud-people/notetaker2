@@ -1,6 +1,21 @@
 version: '3.1'
 
 services:
+  notes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    environment:
+      DB_HOST: mongo
+      DB_BASE: heropa
+      DB_PORT: 27017
+      DB_USER: root
+      DB_PWD: welcome
+      PORT: 3000
 
   mongo:
     image: mongo
