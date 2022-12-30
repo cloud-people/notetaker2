@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\"",
+    "start": "node index.js"
+  },
   "dependencies": {
     "@hapi/boom": "^10.0.0",
     "@hapi/hapi": "^21.1.0",
@@ -10,6 +15,7 @@
     "dotenv": "^16.0.3",
     "joi": "^17.7.0",
     "mongodb": "^4.13.0",
+    "nodemon": "^2.0.20",
     "reflect-metadata": "^0.1.13",
     "ts-loader": "^9.4.2",
     "tsyringe": "^4.7.0",
@@ -17,7 +23,6 @@
   },
   "devDependencies": {
     "@types/hapi__boom": "^9.0.1",
-    "@types/hapi__hapi": "^21.0.0",
     "@types/hapi__inert": "^5.2.4",
     "@types/node": "^18.11.18",
     "ts-node": "^10.9.1",

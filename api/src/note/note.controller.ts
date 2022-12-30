@@ -11,7 +11,7 @@ export default class NoteController {
         @inject('note-route') private readonly path: string,
         private readonly hapi: Hapi.Server,
         private readonly notesService: NoteService,
-    ) {}
+    ) { }
 
     public setupRoutes(): void {
         this.hapi.route({

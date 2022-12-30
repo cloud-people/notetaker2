@@ -33,6 +33,33 @@
 			"response": []
 		},
 		{
+			"name": "Update Note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"63ae1e918a6a725e14d89bfa\",\n    \"title\": \"What is TypeScript?\",\n    \"content\": \"<div class=\\\" col1\\\"><h1>TypeScript is <strong>JavaScript with syntax for types.</strong></h1><p>TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.</p><div class=\\\"call-to-action\\\" style=\\\"justify-content:left\\\"><a class=\\\"fluid-button undefined\\\" href=\\\"/download\\\"><div><div class=\\\"fluid-button-title\\\">Try TypeScript Now</div><div class=\\\"fluid-button-subtitle\\\">Online or via npm</div></div><div class=\\\"fluid-button-icon\\\"><svg width=\\\"21\\\" height=\\\"5\\\" viewBox=\\\"0 0 21 5\\\" fill=\\\"none\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"><rect x=\\\"0.5\\\" y=\\\"0.5\\\" width=\\\"4\\\" height=\\\"4\\\" stroke=\\\"black\\\"></rect><rect x=\\\"8.5\\\" y=\\\"0.5\\\" width=\\\"4\\\" height=\\\"4\\\" stroke=\\\"black\\\"></rect><rect x=\\\"16.5\\\" y=\\\"0.5\\\" width=\\\"4\\\" height=\\\"4\\\" stroke=\\\"black\\\"></rect></svg></div></a></div></div>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/notes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get All Notes",
 			"request": {
 				"method": "GET",

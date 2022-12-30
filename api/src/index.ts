@@ -40,10 +40,10 @@ const init = async (): Promise<void> => {
     container.register(Hapi.Server, { useValue: server });
     container.register('note-route', { useValue: '/api/notes' });
     container.register('note-repo', { useValue: conn.getMongoRepository<Note>(Note) });
-    
+
+    // SERVER
     const notesRouter: NoteController = container.resolve(NoteController);
     notesRouter.setupRoutes();
-
     await server.register(Inert);
     await server.start();
 
@@ -58,11 +58,9 @@ const init = async (): Promise<void> => {
     // EXIT
     process.on('SIGINT', async () => {
         await server.stop();
-        await conn.close()
+        await conn.destroy();
         console.log('Notes App stopped.');
-        setTimeout(() => {
-            process.exit(0);
-        }, 2000);
+        process.exit(0);
     });
 
 };

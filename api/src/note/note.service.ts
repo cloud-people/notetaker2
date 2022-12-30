@@ -23,7 +23,7 @@ export default class NoteService {
 
     public async updateNote(incomingNote: Note): Promise<Note> {
         const result = await this.repo.updateOne(
-            { 
+            {
                 _id: new ObjectId(incomingNote._id as any),
             },
             {

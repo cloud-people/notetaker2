@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 import INote from '../models/iNote';
+import { environment } from './../environments/environment';
 
 @Injectable()
 export default class NotesService {
-    private url: string = 'http://localhost:3040/api/notes';
+    private url: string;
+
+    public constructor() {
+        this.url = environment.notes_api;
+    }
 
     public async addNote(note: INote): Promise<INote> {
         const headers = new Headers();
