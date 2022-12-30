@@ -22,6 +22,7 @@ You'll find Postman collection and environment files in the `postman` folder. Im
 - Missing TDD. Just implemented one test case. It is missing all other tests as well as regressive and e2e tests. Unlike the bullet above, I don't see any problem in casting types to any in tests. I'd rather invest my time making sure tests are really testing desired behaviour than making Typescript happy in my test suite.
 - Missing Logging.
 - Missing proper error handling with logging.
+- Could have created a better solution to search notes like, for example, spliting user's input into words and search word by word.
 # Angular App
 ## Setup
 - Open `api` folder.
@@ -31,9 +32,12 @@ You'll find Postman collection and environment files in the `postman` folder. Im
 - APP should be available on `http://localhost:4200`
 - Remember to have the Api running for App to work
 ## Notes about App
-It's been a long time since I last worked with Angular and I noticed by taking this test that it has changed a lot. I had no problem implementing the App using Angular, but maybe due to the lack of experience with it, I might have taken a "naive"/"by the book" approach by not doing customizations and having things exactly how they are specified in Angular documentation.
+- It's been a long time since I last worked with Angular and I noticed by taking this test that it has changed a lot. I had no problem implementing the App using Angular, but maybe due to the lack of experience with it, I might have taken a "naive"/"by the book" approach by not doing customizations and having things exactly how they are specified in Angular documentation.
+- Used Bootstrap for visuals.
+- Used javascript stadard `fetch` library to communicate with server. I read about Angular http and felt it was too much of a hassle using `rxjs` without any real benefit (or maybe I'm being naive - see 1st bullet :-)
 ## What is missing (or I'm not fully satisfied with)
 - Missing TDD again here.
 - Missing the search feature, albeit I had implemented the endpoint for it.
+- I could have worked more on the UI using loaders, locking controls when "talking" to the server. Better user experience in general. It is not polished.
 # Docker
 I was working on putting everthing to run inside a Docker container, but I didn't have the time to finish. But I'm leaving related files anyway: `docker-compose.yml`, `Dockerfile` and `package.json`.
